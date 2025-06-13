@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a multi-line script
-        run: cd C:\Users\H616247\Desktop\
-             echo "hello world" >> ztmp.txt
+        run: echo "hello world" >> C:\Users\H616247\Desktop\ztmp.txt
+             
 
