@@ -27,7 +27,7 @@ jobs:
 
       - name: Process file
         shell: pwsh  # 显式指定PowerShell
-        run: |
+        run: 
           "" > ../ztmp.txt
           ls > ../ztmp.txt
              
