@@ -29,15 +29,15 @@ jobs:
         shell: pwsh  # 显式指定PowerShell
         run: |
           # 清空或创建文件（使用绝对路径）
-          Set-Content -Path "$env:GITHUB_WORKSPACE/ztmp.txt" -Value ""
+          Set-Content -Path "$env:GITHUB_WORKSPACE/../ztmp.txt" -Value ""
       
           # 追加内容（避免编码问题）
-          Add-Content -Path "$env:GITHUB_WORKSPACE/ztmp.txt" -Value "hello world"
+          Add-Content -Path "$env:GITHUB_WORKSPACE/../ztmp.txt" -Value "hello world"
       
           # 列出目录
-          Get-ChildItem >> "$env:GITHUB_WORKSPACE/ztmp.txt"
+          Get-ChildItem >> "$env:GITHUB_WORKSPACE/../ztmp.txt"
       
           # 验证结果
-          Get-Content "$env:GITHUB_WORKSPACE/ztmp.txt"
+          Get-Content "$env:GITHUB_WORKSPACE/../ztmp.txt"
              
 
