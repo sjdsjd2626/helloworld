@@ -28,9 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: clear
         run: "" > ../ztmp.txt
-      - name: echo
         run: echo "hello world" >> ../ztmp.txt
-      - name: ls 
         run: ls >> ../ztmp.txt
              
 
