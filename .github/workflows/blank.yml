@@ -33,8 +33,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "hello world" >> "..\ztmp.txt"
-          ls >> "..\ztmp.txt"
+          & "C:\iar\ewarm-9.60.2\common\bin\iarbuild.exe" "C:\Users\H616247\Desktop\ML99F330Code\ML99F330.ewp" -build Debug
+          & "C:\Program Files\SEGGER\JLink_V842\JFlash.exe" -openprj "C:\Users\H616247\Desktop\xz.jflash" -open "C:\Users\H616247\Desktop\ML99F330Code\Debug\Exe\ML99F330.hex" -auto -Exit
+          # echo "hello world" >> "..\ztmp.txt"
+          # ls >> "..\ztmp.txt"
           # echo "hello world" >> "C:\Users\H616247\Desktop\ztmp.txt"
           # ls >> "C:\Users\H616247\Desktop\ztmp.txt"
          
