@@ -7,6 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - ".github/*"
   pull_request:
     branches: [ "main" ]
 
@@ -27,17 +29,17 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "" > "..\ztmp.txt"
-        # run: echo "" > "C:\Users\H616247\Desktop\ztmp.txt"
+        # run: echo "" > "..\ztmp.txt"
+        run: echo "" > "C:\Users\H616247\Desktop\ztmp.txt"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          & "C:\iar\ewarm-9.60.2\common\bin\iarbuild.exe" "C:\Users\H616247\Desktop\ML99F330Code\ML99F330.ewp" -build Debug
-          & "C:\Program Files\SEGGER\JLink_V842\JFlash.exe" -openprj "C:\Users\H616247\Desktop\xz.jflash" -open "C:\Users\H616247\Desktop\ML99F330Code\Debug\Exe\ML99F330.hex" -auto -Exit
+          # & "C:\iar\ewarm-9.60.2\common\bin\iarbuild.exe" "C:\Users\H616247\Desktop\ML99F330Code\ML99F330.ewp" -build Debug
+          # & "C:\Program Files\SEGGER\JLink_V842\JFlash.exe" -openprj "C:\Users\H616247\Desktop\xz.jflash" -open "C:\Users\H616247\Desktop\ML99F330Code\Debug\Exe\ML99F330.hex" -auto -Exit
           # echo "hello world" >> "..\ztmp.txt"
           # ls >> "..\ztmp.txt"
-          # echo "hello world" >> "C:\Users\H616247\Desktop\ztmp.txt"
+          echo "hello world" >> "C:\Users\H616247\Desktop\ztmp.txt"
           # ls >> "C:\Users\H616247\Desktop\ztmp.txt"
          
              
